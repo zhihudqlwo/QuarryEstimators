@@ -1,0 +1,512 @@
+# QuarryEstimators
+
+The statistical-estimator source mirror retains an existing maintenance ledger and all source licenses.
+
+### 📝 Complete TODO List
+
+- [ ] **sklearn/_loss/loss.py:1764** - # TODO: once incremental assignment for multiple integer array
+- [ ] **sklearn/_loss/tests/test_loss.py:891** - # TODO: What could we test if loss.approx_hessian?
+- [ ] **sklearn/calibration.py:929** - # TODO: Remove casting to np.float64 when minimum supported SciPy is 1.11.2
+- [ ] **sklearn/calibration.py:991** - # TODO: simplify once upstream issue is addressed
+- [ ] **sklearn/calibration.py:1143** - # TODO: numpy 2.0
+- [ ] **sklearn/callback/tests/test_callback_context.py:428** - # TODO(callbacks): check that the reconstructed estimator can be used to predict
+- [ ] **sklearn/cluster/_hdbscan/hdbscan.py:792** - # TODO: Support np.nan in Cython implementation for precomputed
+- [ ] **sklearn/cluster/_hdbscan/hdbscan.py:854** - # TODO: Benchmark KD vs Ball Tree efficiency
+- [ ] **sklearn/cluster/_hdbscan/hdbscan.py:958** - # TODO: Implement weighted argmin PWD backend
+- [ ] **sklearn/cluster/_optics.py:621** - # TODO: handle working_memory somehow?
+- [ ] **sklearn/cluster/tests/test_affinity_propagation.py:30** - # TODO: AffinityPropagation must preserve dtype for its fitted attributes
+- [ ] **sklearn/cluster/tests/test_hdbscan.py:595** - # TODO(1.10): remove this test
+- [ ] **sklearn/cluster/tests/test_mean_shift.py:81** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/compose/tests/test_column_transformer.py:2661** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/conftest.py:210** - # TODO: configure numpy to output scalar arrays as regular Python scalars
+- [ ] **sklearn/covariance/_graph_lasso.py:145** - # TODO: It is not ideal that the max_iter of the outer
+- [ ] **sklearn/covariance/_shrunk_covariance.py:373** - # TODO: gh-33986 discusses the idea of automatically determining the best
+- [ ] **sklearn/datasets/_arff_parser.py:68** - # TODO: improve for efficiency
+- [ ] **sklearn/datasets/_openml.py:367** - # TODO: feature request OpenML.
+- [ ] **sklearn/datasets/_svmlight_format_io.py:557** - # TODO We can do this cheaper; sorted_indices copies the whole matrix.
+- [ ] **sklearn/datasets/_svmlight_format_io.py:576** - # TODO: simplify interfaces and implementations in _svmlight_format_fast.pyx.
+- [ ] **sklearn/decomposition/_dict_learning.py:142** - # TODO: Make verbosity argument for Lasso?
+- [ ] **sklearn/decomposition/_dict_learning.py:149** - # TODO: This parameter should be exposed.
+- [ ] **sklearn/decomposition/_dict_learning.py:159** - # TODO: move this handling (which is currently too broad)
+- [ ] **sklearn/decomposition/_lda.py:459** - # TODO: make Parallel._effective_n_jobs public instead?
+- [ ] **sklearn/decomposition/_pca.py:564** - # TODO: remove the following two lines when scikit-learn only depends
+- [ ] **sklearn/decomposition/_pca.py:599** - # TODO: remove the following two lines when scikit-learn only
+- [ ] **sklearn/decomposition/_pca.py:752** - # TODO: update this code to either:
+- [ ] **sklearn/decomposition/tests/test_dict_learning.py:40** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/decomposition/tests/test_dict_learning.py:223** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/decomposition/tests/test_dict_learning.py:244** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/decomposition/tests/test_dict_learning.py:638** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/decomposition/tests/test_dict_learning.py:993** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/decomposition/tests/test_nmf.py:992** - # TODO: use the provided W when init="custom".
+- [ ] **sklearn/decomposition/tests/test_online_lda.py:187** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/decomposition/tests/test_online_lda.py:212** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/decomposition/tests/test_pca.py:580** - # TODO: explain what this is testing
+- [ ] **sklearn/decomposition/tests/test_pca.py:597** - # TODO: explain what this is testing
+- [ ] **sklearn/decomposition/tests/test_sparse_pca.py:77** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/discriminant_analysis.py:124** - # TODO: Explore the choice of using bincount + add.at as it seems sub optimal
+- [ ] **sklearn/ensemble/_base.py:29** - # TODO(SLEP6): remove if-condition for unrouted sample_weight when metadata
+- [ ] **sklearn/ensemble/_forest.py:1942** - # TODO(1.11): remove support of "friedman_mse" criterion.
+- [ ] **sklearn/ensemble/_forest.py:2289** - # TODO: remove once randomsplitter supports categorical features
+- [ ] **sklearn/ensemble/_forest.py:2647** - # TODO: remove once randomsplitter supports categorical features
+- [ ] **sklearn/ensemble/_forest.py:2698** - # TODO(1.11): remove support of "friedman_mse" criterion.
+- [ ] **sklearn/ensemble/_gb.py:94** - # TODO: Use loss.fit_intercept_only where appropriate instead of
+- [ ] **sklearn/ensemble/_gb.py:442** - # TODO: Without oob, i.e. with self.subsample = 1.0, we could call
+- [ ] **sklearn/ensemble/_gb.py:669** - # TODO: Is this still required?
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/binning.py:382** - # TODO: complexity is O(n_categorical_features * 255). Maybe this is
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py:92** - # TODO: Ideally this should be computed in parallel over the leaves using something
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py:455** - # TODO: remove when PDP supports sample weights
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py:565** - # TODO: incorporate sample_weight in sampling here, as well as
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py:973** - # TODO: incorporate sample_weights here in `resample`
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py:2112** - # TODO: This could be done in parallel
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/predictor.py:143** - # TODO: consider always using platform agnostic dtypes for fitted
+- [ ] **sklearn/ensemble/_hist_gradient_boosting/tests/test_compare_lightgbm.py:103** - # TODO: We are not entirely satisfied with this lax comparison, but the root
+- [ ] **sklearn/ensemble/_stacking.py:745** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/ensemble/_stacking.py:1129** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/ensemble/tests/test_bagging.py:471** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/ensemble/tests/test_bagging.py:515** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/ensemble/tests/test_bagging.py:556** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/ensemble/tests/test_bagging.py:800** - # TODO(slep006): remove block when default routing is implemented
+- [ ] **sklearn/ensemble/tests/test_forest.py:161** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/ensemble/tests/test_forest.py:1551** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/ensemble/tests/test_forest.py:1834** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/ensemble/tests/test_forest.py:1878** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/ensemble/tests/test_forest.py:1930** - # TODO(1.11): remove test with the deprecation of friedman_mse criterion
+- [ ] **sklearn/experimental/enable_hist_gradient_boosting.py:13** - # TODO(1.12): remove this file
+- [ ] **sklearn/experimental/enable_iterative_imputer.py:14** - # TODO(1.14): is it long enough to start a full deprecation cycle?
+- [ ] **sklearn/experimental/tests/test_enable_hist_gradient_boosting.py:11** - # TODO(1.12): remove this test
+- [ ] **sklearn/externals/array_api_compat/common/_aliases.py:17** - # TODO: import from typing (requires Python >=3.13)
+- [ ] **sklearn/externals/array_api_compat/common/_aliases.py:310** - # TODO: The standard is not clear about what should happen when x.ndim == 0.
+- [ ] **sklearn/externals/array_api_compat/common/_aliases.py:382** - # TODO: np.clip has other ufunc kwargs
+- [ ] **sklearn/externals/array_api_compat/common/_helpers.py:42** - # TODO: import from typing (requires Python >=3.13)
+- [ ] **sklearn/externals/array_api_compat/common/_helpers.py:116** - # TODO: Should we reject ndarray subclasses?
+- [ ] **sklearn/externals/array_api_compat/common/_helpers.py:271** - # TODO: Account for other backends.
+- [ ] **sklearn/externals/array_api_compat/common/_helpers.py:292** - # TODO: drop this check after np.matrix is gone
+- [ ] **sklearn/externals/array_api_compat/common/_helpers.py:306** - # TODO: drop support for numpy<2 which didn't have __array_namespace__
+- [ ] **sklearn/externals/array_api_compat/common/_helpers.py:313** - # TODO: drop support for jax<0.4.32 which didn't have __array_namespace__
+- [ ] **sklearn/externals/array_api_compat/common/_helpers.py:917** - # TODO: What if our array is on the GPU already?
+- [ ] **sklearn/externals/array_api_compat/cupy/_info.py:181** - # TODO: Does this depend on device?
+- [ ] **sklearn/externals/array_api_compat/cupy/_info.py:243** - # TODO: Does this depend on device?
+- [ ] **sklearn/externals/array_api_compat/dask/array/_aliases.py:64** - # TODO: respect device keyword?
+- [ ] **sklearn/externals/array_api_compat/dask/array/_aliases.py:95** - # TODO: respect device keyword?
+- [ ] **sklearn/externals/array_api_compat/dask/array/_aliases.py:159** - # TODO: respect device keyword?
+- [ ] **sklearn/externals/array_api_compat/dask/array/_aliases.py:220** - # TODO: This won't handle dask unknown shapes
+- [ ] **sklearn/externals/array_api_compat/dask/array/linalg.py:23** - # TODO: use the QR wrapper once dask
+- [ ] **sklearn/externals/array_api_compat/dask/array/linalg.py:50** - # TODO: can't avoid computing U or V for dask
+- [ ] **sklearn/externals/array_api_extra/_lib/_at.py:22** - # TODO import from typing (requires Python >=3.11)
+- [ ] **sklearn/externals/array_api_extra/_lib/_funcs.py:303** - # TODO: Benchmark whether this is faster on the NumPy backend:
+- [ ] **sklearn/externals/array_api_extra/_lib/_utils/_helpers.py:37** - # TODO import from typing (requires Python >=3.12 and >=3.13)
+- [ ] **sklearn/externals/array_api_extra/testing.py:47** - # TODO import override from typing (requires Python >=3.12)
+- [ ] **sklearn/feature_selection/_from_model.py:383** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/feature_selection/_from_model.py:467** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/feature_selection/_univariate_selection.py:372** - # TODO: for Scipy <= 1.10, `isspmatrix(X)` returns `True` for sparse arrays.
+- [ ] **sklearn/feature_selection/_univariate_selection.py:1060** - # TODO this class should fit on either p-values or scores,
+- [ ] **sklearn/inspection/_partial_dependence.py:117** - # TODO: we should handle missing values (i.e. `np.nan`) specifically and store them
+- [ ] **sklearn/inspection/_plot/decision_boundary.py:60** - # TODO(1.12): remove
+- [ ] **sklearn/inspection/_plot/decision_boundary.py:352** - # TODO(1.12): remove
+- [ ] **sklearn/inspection/_plot/decision_boundary.py:358** - # TODO(1.12): remove and replace with `self.target_colors = target_colors`
+- [ ] **sklearn/inspection/_plot/decision_boundary.py:365** - # TODO(1.12): remove
+- [ ] **sklearn/inspection/_plot/decision_boundary.py:560** - # TODO(1.12): remove
+- [ ] **sklearn/inspection/_plot/decision_boundary.py:843** - # TODO(1.12): remove and replace with direct use of `target_colors`
+- [ ] **sklearn/inspection/_plot/tests/test_boundary_decision_display.py:778** - # TODO: Remove version check and the else branch once 3.10 is the minimal
+- [ ] **sklearn/inspection/_plot/tests/test_boundary_decision_display.py:808** - # TODO: Remove version check and the else branch once 3.10 is the minimal
+- [ ] **sklearn/inspection/_plot/tests/test_boundary_decision_display.py:986** - # TODO(1.12): remove
+- [ ] **sklearn/inspection/_plot/tests/test_boundary_decision_display.py:1019** - # TODO(1.12): remove
+- [ ] **sklearn/inspection/tests/test_partial_dependence.py:731** - # TODO: extend to HistGradientBoosting once sample_weight is supported
+- [ ] **sklearn/inspection/tests/test_partial_dependence.py:754** - # TODO: remove/fix when PDP supports HGBT with sample weights
+- [ ] **sklearn/isotonic.py:162** - # TODO: remove this branch when Scipy 1.12 is the minimum supported version
+- [ ] **sklearn/linear_model/_base.py:52** - # TODO: bayesian_ridge_regression and bayesian_regression_ard
+- [ ] **sklearn/linear_model/_base.py:891** - # TODO: instead of warning and recomputing, we could just center
+- [ ] **sklearn/linear_model/_coordinate_descent.py:175** - # TODO: For y.ndim >> 1, think about avoiding memory of y = y - y.mean()
+- [ ] **sklearn/linear_model/_coordinate_descent.py:230** - # TODO(1.11): remove "warn" and None options.
+- [ ] **sklearn/linear_model/_coordinate_descent.py:406** - # TODO(1.11): remove n_alphas and alphas={"warn", None}; set alphas=100 by default.
+- [ ] **sklearn/linear_model/_coordinate_descent.py:467** - # TODO(1.11): remove "warn" and None options.
+- [ ] **sklearn/linear_model/_coordinate_descent.py:641** - # TODO(1.11): remove n_alphas and alphas={"warn", None}; set alphas=100 by default.
+- [ ] **sklearn/linear_model/_coordinate_descent.py:1805** - # TODO: Sample_weights?
+- [ ] **sklearn/linear_model/_coordinate_descent.py:2823** - # TODO: improve
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:613** - # TODO:
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:990** - # TODO: This should be done in LinearModelLoss.gradient_hessian, as
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:999** - # TODO(newton-cd): For the time being, we just honestly fail.
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1129** - # TODO(newton-cd): This is still the simple solution.
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1152** - # TODO(newton-cd): improve
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1188** - # TODO(newton-cd): Check if the following improves convergence
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1213** - # TODO(newton-cd): What to do?
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1399** - # TODO(newton-cd): For the time being, we just honestly fail.
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1446** - # TODO(newton-cd): improve
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1460** - # TODO(newton-cd): improve
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1514** - #     # TODO(newton-cd): Check if this improves convergence
+- [ ] **sklearn/linear_model/_glm/_newton_solver.py:1537** - # TODO(newton-cd): What to do?
+- [ ] **sklearn/linear_model/_glm/glm.py:313** - # TODO: if alpha=0 check that X is not rank deficient
+- [ ] **sklearn/linear_model/_glm/glm.py:519** - # TODO: Adapt link to User Guide in the docstring, once
+- [ ] **sklearn/linear_model/_glm/glm.py:523** - # TODO: make D^2 a score function in module metrics (and thereby get
+- [ ] **sklearn/linear_model/_least_angle.py:816** - # TODO: better names for these variables: z
+- [ ] **sklearn/linear_model/_least_angle.py:873** - # TODO: this could be updated
+- [ ] **sklearn/linear_model/_least_angle.py:885** - # Cov_n = Cov_j + x_j * X + increment(betas) TODO:
+- [ ] **sklearn/linear_model/_least_angle.py:891** - # TODO: this could be updated
+- [ ] **sklearn/linear_model/_linear_loss.py:24** - # TODO: This "sandwich product" is the main computational bottleneck for solvers
+- [ ] **sklearn/linear_model/_linear_loss.py:238** - # TODO(numpy 2.0): use np.linalg.vector_norm
+- [ ] **sklearn/linear_model/_linear_loss.py:383** - # TODO: The lbfgs solver currently only works with numpy arrays and expects
+- [ ] **sklearn/linear_model/_logistic.py:114** - # TODO(1.10): update message to remove "as well as penalty=None".
+- [ ] **sklearn/linear_model/_logistic.py:194** - # TODO(1.10): use the return value of ``call_on_fit_task_end`` (a bool
+- [ ] **sklearn/linear_model/_logistic.py:436** - # TODO(newton-cd): add multiclass support
+- [ ] **sklearn/linear_model/_logistic.py:589** - # TODO(callbacks) When adding callback support to LogisticRegressionCV,
+- [ ] **sklearn/linear_model/_logistic.py:1387** - # TODO(callbacks): update/remove as more solvers get supported.
+- [ ] **sklearn/linear_model/_logistic.py:1614** - # TODO: enable multi-threading if benchmarks show a positive effect,
+- [ ] **sklearn/linear_model/_logistic.py:2069** - # TODO(1.11): remove this when sample_weight as positional arg is removed
+- [ ] **sklearn/linear_model/_logistic.py:2579** - # TODO(1.11): remove this decorator along with `sample_weight` from the `score`
+- [ ] **sklearn/linear_model/_logistic.py:2610** - # TODO(1.11): for backwards compatibility, when `sample_weight` becomes a part
+- [ ] **sklearn/linear_model/_logistic.py:2614** - # TODO(1.11): remove this when sample_weight is removed from the `score`
+- [ ] **sklearn/linear_model/_logistic.py:2676** - # TODO(1.11): remove
+- [ ] **sklearn/linear_model/_omp.py:1098** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/linear_model/_passive_aggressive.py:16** - # TODO(1.10): Remove
+- [ ] **sklearn/linear_model/_passive_aggressive.py:342** - # TODO(1.10): Remove
+- [ ] **sklearn/linear_model/_ridge.py:1628** - # TODO(1.11) raise ValueError
+- [ ] **sklearn/linear_model/_stochastic_gradient.py:159** - # TODO: Consider whether pa1 and pa2 could also work for other losses.
+- [ ] **sklearn/linear_model/tests/test_base.py:675** - # TODO: replace this torch/MPS-specific coverage by array-api-strict once
+- [ ] **sklearn/linear_model/tests/test_common.py:68** - # TODO: FIx SAGA which fails badly with sample_weights.
+- [ ] **sklearn/linear_model/tests/test_common.py:78** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_common.py:79** - # TODO(1.10): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_common.py:225** - # TODO(1.10): remove
+- [ ] **sklearn/linear_model/tests/test_common.py:226** - # TODO(1.11): remove
+- [ ] **sklearn/linear_model/tests/test_coordinate_descent.py:699** - # TODO: The high number of iterations are required for convergence and show room
+- [ ] **sklearn/linear_model/tests/test_coordinate_descent.py:1686** - # TODO:
+- [ ] **sklearn/linear_model/tests/test_coordinate_descent.py:1862** - # TODO(1.11): remove
+- [ ] **sklearn/linear_model/tests/test_least_angle.py:29** - # TODO: use another dataset that has multiple drops
+- [ ] **sklearn/linear_model/tests/test_least_angle.py:120** - # TODO: remove warning filter when numpy min version >= 2.0.0
+- [ ] **sklearn/linear_model/tests/test_least_angle.py:132** - # TODO: remove warning filter when numpy min version >= 2.0.0
+- [ ] **sklearn/linear_model/tests/test_logistic.py:62** - # TODO(1.10): remove filterwarnings for l1_ratios after default changed.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:193** - # TODO(newton-cd): add newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:256** - # TODO(1.11): remove filterwarnings with change of default scoring
+- [ ] **sklearn/linear_model/tests/test_logistic.py:258** - # TODO(1.10): remove filterwarnings with deprecation period of use_legacy_attributes
+- [ ] **sklearn/linear_model/tests/test_logistic.py:265** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:310** - # TODO(1.11): remove filterwarnings with change of default scoring
+- [ ] **sklearn/linear_model/tests/test_logistic.py:312** - # TODO(1.10): remove test with removal of penalty
+- [ ] **sklearn/linear_model/tests/test_logistic.py:520** - # TODO(1.12): remove deprecated use_legacy_attributes
+- [ ] **sklearn/linear_model/tests/test_logistic.py:532** - # TODO(1.10): remove because it is default now.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:537** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:566** - # TODO(1.11): remove filterwarnings with change of default scoring
+- [ ] **sklearn/linear_model/tests/test_logistic.py:606** - # TODO(1.10): remove with new default of l1_ratios
+- [ ] **sklearn/linear_model/tests/test_logistic.py:655** - # TODO(1.10) for consistency we may want to adapt _log_reg_scoring_path to
+- [ ] **sklearn/linear_model/tests/test_logistic.py:701** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:707** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:732** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:744** - # TODO(1.12): remove deprecated use_legacy_attributes
+- [ ] **sklearn/linear_model/tests/test_logistic.py:761** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:788** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:980** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1012** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1015** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1073** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1111** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1118** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1155** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1169** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1173** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1187** - # TODO(1.11): remove filterwarnings with change of default scoring
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1189** - # TODO(1.10): remove filterwarnings with deprecation period of use_legacy_attributes
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1368** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1514** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1617** - # TODO(1.10): remove l1_ratios because it is default now.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1621** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1630** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1647** - # TODO(newton-cd): remove newton-cd when it supports multiclass
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1683** - # TODO(newton-cd): Think about adding newton-cd solvers.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1882** - # TODO(1.10): remove whole test with the removal of penalty
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1908** - # TODO(newton-cd): improve test by using CD solvers instead of saga
+- [ ] **sklearn/linear_model/tests/test_logistic.py:1943** - # TODO(newton-cd): use CD solvers instead of saga?
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2013** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2053** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2093** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2124** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2156** - # TODO(1.10): remove whole test with the removal of penalty
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2314** - # TODO(1.10): remove whole test with the removal of penalty
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2346** - # TODO(1.10): remove whole test with the removal of penalty
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2443** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2703** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2757** - # TODO(1.11): remove filterwarnings with change of default scoring
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2759** - # TODO(1.10): remove filterwarnings with deprecation period of use_legacy_attributes
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2769** - # TODO(1.10): remove after deprecation cycle of penalty.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2782** - # TODO(1.10): use_legacy_attributes gets deprecated
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2786** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2793** - # TODO(1.10): remove after deprecation cycle.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2806** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2814** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/linear_model/tests/test_logistic.py:2821** - # TODO(1.10): remove this test when n_jobs gets removed
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3026** - # TODO: this test is currently very sensitive to the value
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3090** - # TODO(1.10): remove when penalty is removed
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3102** - # TODO(1.11): remove when default of scoring has changed
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3113** - # TODO(1.11): remove test when default of scoring has changed
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3152** - # TODO(callbacks): also test for other solvers when they get supported.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3170** - # TODO(callbacks): also test for other solvers when they get supported.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3228** - # TODO(1.10): Uncomment when scipy callbacks can be interrupted with StopIteration in
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3230** - # in the scipy callback function, see TODO in _make_scipy_callback_fun).
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3231** - # TODO(callbacks): also test for other solvers when they get supported.
+- [ ] **sklearn/linear_model/tests/test_logistic.py:3241** - # TODO(callbacks): update/remove as more solvers get supported.
+- [ ] **sklearn/linear_model/tests/test_passive_aggressive.py:31** - # TODO(1.10): Move to test_sgd.py
+- [ ] **sklearn/linear_model/tests/test_passive_aggressive.py:139** - # TODO(1.10): Move to test_sgd.py
+- [ ] **sklearn/linear_model/tests/test_passive_aggressive.py:276** - # TODO(1.10): Move to test_sgd.py
+- [ ] **sklearn/linear_model/tests/test_passive_aggressive.py:301** - # TODO(1.10): remove
+- [ ] **sklearn/linear_model/tests/test_ridge.py:1003** - # TODO(1.11) should raises ValueError
+- [ ] **sklearn/linear_model/tests/test_ridge.py:1043** - # TODO(1.11) should raises ValueError
+- [ ] **sklearn/linear_model/tests/test_ridge.py:1181** - # TODO(1.11) should raises ValueError
+- [ ] **sklearn/linear_model/tests/test_ridge.py:2577** - # TODO: widening the range of alphas causes failures in the test, in
+- [ ] **sklearn/linear_model/tests/test_sag.py:490** - # TODO: uncomment when sparse Ridge with intercept will be fixed (#4710)
+- [ ] **sklearn/linear_model/tests/test_sgd.py:527** - # TODO(1.10): remove this test
+- [ ] **sklearn/manifold/_mds.py:428** - # TODO(1.10): change default `init` to "classical_mds", see PR #32229
+- [ ] **sklearn/manifold/_mds.py:429** - # TODO(1.10): drop support for boolean `metric`, see PR #32229
+- [ ] **sklearn/manifold/_mds.py:430** - # TODO(1.10): drop support for `dissimilarity`, see PR #32229
+- [ ] **sklearn/manifold/_spectral_embedding.py:90** - # TODO(jjerphan): Once SciPy 1.11.3 is the minimum supported version, use
+- [ ] **sklearn/manifold/tests/test_isomap.py:147** - # TODO check that it actually does something useful
+- [ ] **sklearn/manifold/tests/test_isomap.py:233** - # TODO: compare results on dense and sparse data as proposed in:
+- [ ] **sklearn/manifold/tests/test_locally_linear.py:48** - # TODO: rewrite this test to make less sensitive to the random seed,
+- [ ] **sklearn/manifold/tests/test_locally_linear.py:121** - # TODO check that it actually does something useful
+- [ ] **sklearn/manifold/tests/test_mds.py:127** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/manifold/tests/test_mds.py:142** - # TODO(1.10): remove warning filter
+- [ ] **sklearn/manifold/tests/test_mds.py:156** - # TODO(1.10): remove warning filter
+- [ ] **sklearn/manifold/tests/test_mds.py:195** - # TODO(1.10): remove warning filter
+- [ ] **sklearn/manifold/tests/test_mds.py:222** - # TODO(1.10): remove warning filter
+- [ ] **sklearn/manifold/tests/test_mds.py:245** - # TODO(1.10): delete this test
+- [ ] **sklearn/manifold/tests/test_spectral_embedding.py:128** - # TODO: investigate why this test is seed-sensitive on 32-bit Python
+- [ ] **sklearn/manifold/tests/test_t_sne.py:319** - # TODO: compare results on dense and sparse data as proposed in:
+- [ ] **sklearn/manifold/tests/test_t_sne.py:1018** - # TODO: re-enable this test if/when `manhattan_distances` is refactored to
+- [ ] **sklearn/metrics/_classification.py:2163** - # TODO(1.12): remove warning and change the default of average to "binary"
+- [ ] **sklearn/metrics/_classification.py:3442** - # TODO(1.11): Remove check and remove default value for `y_proba`.
+- [ ] **sklearn/metrics/_classification.py:3959** - # TODO(1.11): Remove check and remove default value for `y_proba`.
+- [ ] **sklearn/metrics/_pairwise_distances_reduction/_dispatcher.py:76** - # TODO: implement a stable simultaneous_sort.
+- [ ] **sklearn/metrics/_pairwise_distances_reduction/_dispatcher.py:124** - # TODO: support CSR matrices without non-zeros elements
+- [ ] **sklearn/metrics/_pairwise_distances_reduction/_dispatcher.py:127** - # TODO: support CSR matrices with int64 indices and indptr
+- [ ] **sklearn/metrics/_pairwise_distances_reduction/_dispatcher.py:472** - # TODO: implement Euclidean specialization using GEMM.
+- [ ] **sklearn/metrics/_pairwise_distances_reduction/_dispatcher.py:640** - # TODO: implement Euclidean specialization using GEMM.
+- [ ] **sklearn/metrics/_plot/tests/test_common_curve_display.py:263** - # TODO: Clean-up once `estimator_name` deprecated in all displays
+- [ ] **sklearn/metrics/_plot/tests/test_common_curve_display.py:308** - # TODO: Clean-up once `estimator_name` deprecated in all displays
+- [ ] **sklearn/metrics/_plot/tests/test_common_curve_display.py:800** - # TODO(1.10): Remove
+- [ ] **sklearn/metrics/_plot/tests/test_common_curve_display.py:805** - # TODO(1.12): Remove
+- [ ] **sklearn/metrics/_plot/tests/test_common_curve_display.py:821** - # TODO(1.11): Remove
+- [ ] **sklearn/metrics/_plot/tests/test_common_curve_display.py:826** - # TODO(1.12): Remove
+- [ ] **sklearn/metrics/_plot/tests/test_det_curve_display.py:116** - # TODO(1.10): remove
+- [ ] **sklearn/metrics/_plot/tests/test_precision_recall_display.py:678** - # TODO(1.10): remove
+- [ ] **sklearn/metrics/_scorer.py:192** - # TODO(slep006): remove when metadata routing is the only way
+- [ ] **sklearn/metrics/_scorer.py:271** - # TODO(slep006): remove when metadata routing is the only way
+- [ ] **sklearn/metrics/_scorer.py:287** - # TODO (1.11): remove decorator and sample_weight param from signature
+- [ ] **sklearn/metrics/_scorer.py:323** - # TODO(1.11): remove this when sample_weight is removed from the `__call__`
+- [ ] **sklearn/metrics/_scorer.py:546** - # TODO(slep006): remove when metadata routing is the only way
+- [ ] **sklearn/metrics/cluster/__init__.py:43** - # TODO(1.10): Remove
+- [ ] **sklearn/metrics/cluster/_supervised.py:1307** - # TODO(1.10): Remove
+- [ ] **sklearn/metrics/cluster/tests/test_supervised.py:273** - # TODO(1.10): Remove
+- [ ] **sklearn/metrics/pairwise.py:2009** - # TODO: do it also for other norms.
+- [ ] **sklearn/metrics/pairwise.py:2030** - # TODO: below 2 lines can be removed once min scipy >= 1.14. Support for
+- [ ] **sklearn/metrics/tests/test_classification.py:2960** - # TODO(1.11): Remove
+- [ ] **sklearn/metrics/tests/test_classification.py:3174** - # TODO(1.12): remove the filterwarnings when the default value of average in
+- [ ] **sklearn/metrics/tests/test_classification.py:3228** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/metrics/tests/test_classification.py:3494** - # TODO(1.11): Remove
+- [ ] **sklearn/metrics/tests/test_classification.py:3740** - # TODO(1.12): remove
+- [ ] **sklearn/metrics/tests/test_common.py:456** - # TODO: Handle multi_class metrics that has a labels argument as well as a
+- [ ] **sklearn/metrics/tests/test_common.py:1318** - # TODO those metrics doesn't support string label yet
+- [ ] **sklearn/metrics/tests/test_dist_metrics.py:80** - # TODO: Inspect slight numerical discrepancy
+- [ ] **sklearn/metrics/tests/test_dist_metrics.py:164** - # TODO: Inspect slight numerical discrepancy
+- [ ] **sklearn/metrics/tests/test_pairwise.py:245** - # TODO Fix manhattan_distances to preserve dtype.
+- [ ] **sklearn/metrics/tests/test_pairwise.py:256** - # TODO Fix manhattan_distances to preserve dtype.
+- [ ] **sklearn/metrics/tests/test_pairwise.py:1851** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/metrics/tests/test_pairwise_distances_reduction.py:709** - # TODO: support CSR matrices without non-zeros elements
+- [ ] **sklearn/metrics/tests/test_pairwise_distances_reduction.py:716** - # TODO: support CSR matrices with int64 indices and indptr
+- [ ] **sklearn/metrics/tests/test_pairwise_distances_reduction.py:913** - # TODO: introduce assertions on UserWarnings once the Euclidean specialisation
+- [ ] **sklearn/metrics/tests/test_ranking.py:2608** - # TODO(1.11): remove this test
+- [ ] **sklearn/metrics/tests/test_score_objects.py:1445** - # TODO: remove when enable_metadata_routing is deprecated
+- [ ] **sklearn/mixture/_base.py:143** - # TODO: when array API supports __setitem__ with fancy indexing we
+- [ ] **sklearn/model_selection/__init__.py:51** - # TODO: remove this check once the estimator is no longer experimental.
+- [ ] **sklearn/model_selection/__init__.py:97** - # TODO: remove this check once the estimator is no longer experimental.
+- [ ] **sklearn/model_selection/_search.py:903** - # TODO(slep006): remove when metadata routing is the only way
+- [ ] **sklearn/model_selection/_search_successive_halving.py:419** - # TODO: remove this when we add array API support to
+- [ ] **sklearn/model_selection/_validation.py:63** - # TODO(SLEP6): To be removed when set_config(enable_metadata_routing=False) is not
+- [ ] **sklearn/model_selection/_validation.py:338** - # TODO(SLEP6): also pass metadata to the predict method for
+- [ ] **sklearn/model_selection/_validation.py:1186** - # TODO(SLEP6): also pass metadata for the predict method.
+- [ ] **sklearn/model_selection/_validation.py:1649** - # TODO(SLEP6): also pass metadata to the predict method for
+- [ ] **sklearn/model_selection/_validation.py:1988** - # TODO(SLEP6): also pass metadata to the predict method for
+- [ ] **sklearn/model_selection/tests/test_search.py:1123** - # Test the IID parameter  TODO: Clearly this test does something else???
+- [ ] **sklearn/model_selection/tests/test_search.py:2104** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/model_selection/tests/test_search.py:2132** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/model_selection/tests/test_search.py:2634** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/model_selection/tests/test_validation.py:342** - # TODO(1.12): remove the filterwarnings when the default value of average in
+- [ ] **sklearn/multioutput.py:752** - # TODO: remove this condition check when the minimum supported scipy version
+- [ ] **sklearn/neighbors/_classification.py:334** - # TODO: systematize this mapping of metric for
+- [ ] **sklearn/neighbors/_classification.py:342** - # TODO: Implement efficient multi-output solution
+- [ ] **sklearn/neighbors/_classification.py:367** - # TODO: adapt the heuristic for `strategy="auto"` for
+- [ ] **sklearn/neighbors/_kde.py:40** - # TODO: implement a brute force version for testing purposes
+- [ ] **sklearn/neighbors/_kde.py:41** - # TODO: create a density estimation base class?
+- [ ] **sklearn/neighbors/_kde.py:334** - # TODO: implement sampling for other valid kernel shapes
+- [ ] **sklearn/neighbors/tests/test_kd_tree.py:35** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/neighbors/tests/test_kd_tree.py:110** - # TODO(1.12): remove test_thread_safety
+- [ ] **sklearn/neighbors/tests/test_kd_tree.py:144** - # TODO(1.12): remove test_stats_deprecated
+- [ ] **sklearn/neighbors/tests/test_lof.py:252** - # TODO: compare results on dense and sparse data as proposed in:
+- [ ] **sklearn/neighbors/tests/test_neighbors.py:381** - # TODO: also test radius_neighbors, but requires different assertion
+- [ ] **sklearn/neighbors/tests/test_neighbors.py:1626** - # TODO: remove when NearestNeighbors methods uses parameter validation mechanism
+- [ ] **sklearn/neighbors/tests/test_neighbors.py:1730** - # TODO: Remove ignore_warnings when minimum supported SciPy version is 1.17
+- [ ] **sklearn/neighbors/tests/test_neighbors.py:2118** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/neighbors/tests/test_neighbors.py:2275** - # TODO: Remove ignore_warnings when minimum supported SciPy version is 1.17
+- [ ] **sklearn/neighbors/tests/test_neighbors.py:2510** - # TODO: if score is refactored to evaluate models for other scoring
+- [ ] **sklearn/neural_network/_base.py:211** - # TODO: Decide what to do with the term `xlogy(y_true, y_true) - y_true`. For now,
+- [ ] **sklearn/neural_network/_multilayer_perceptron.py:660** - # TODO: incorporate sample_weight in sampling here.
+- [ ] **sklearn/pipeline.py:1593** - # TODO merge with _fit_transform_one when all callers support callbacks
+- [ ] **sklearn/pipeline.py:1976** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/pipeline.py:2024** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/pipeline.py:2097** - # TODO(SLEP6): remove when metadata routing cannot be disabled.
+- [ ] **sklearn/preprocessing/_data.py:2417** - # TODO: This should be refactored because binarize also calls
+- [ ] **sklearn/preprocessing/_target_encoder.py:239** - # TODO(1.11) remove `shuffle` and `random_state` params, which had been deprecated
+- [ ] **sklearn/preprocessing/_target_encoder.py:340** - # TODO(1.11): remove code block
+- [ ] **sklearn/preprocessing/_target_encoder.py:354** - # TODO(1.11): pass shuffle=True to keep backwards compatibility for default
+- [ ] **sklearn/preprocessing/tests/test_data.py:818** - # TODO: replace this torch/MPS-specific coverage by array-api-strict once
+- [ ] **sklearn/preprocessing/tests/test_data.py:832** - # TODO: replace this torch/MPS-specific coverage by array-api-strict once
+- [ ] **sklearn/preprocessing/tests/test_discretization.py:492** - ## TODO: change to averaged inverted cdf, but that means we only get bin
+- [ ] **sklearn/preprocessing/tests/test_discretization.py:531** - # TODO this check is redundant with common checks and can be removed
+- [ ] **sklearn/preprocessing/tests/test_target_encoder.py:726** - # TODO: remove this workaround when pandas 4 is our minimum version
+- [ ] **sklearn/preprocessing/tests/test_target_encoder.py:765** - # TODO(1.11): remove after deprecation
+- [ ] **sklearn/svm/_base.py:228** - # TODO(1.11): remove probability
+- [ ] **sklearn/svm/_base.py:347** - # TODO: add keyword copy to copy on demand
+- [ ] **sklearn/svm/tests/test_sparse.py:97** - # TODO(1.11): remove probability=True and adapt check_svm_model_equal accordingly.
+- [ ] **sklearn/svm/tests/test_sparse.py:127** - # TODO(1.11): remove probability=True and calls to predict_proba.
+- [ ] **sklearn/svm/tests/test_sparse.py:465** - # TODO(1.11): remove probability=True and calls to predict_proba.
+- [ ] **sklearn/svm/tests/test_svm.py:67** - # TODO: investigate why assertion on L148 fails.
+- [ ] **sklearn/svm/tests/test_svm.py:323** - # TODO: rework this test to be independent of the random seeds.
+- [ ] **sklearn/svm/tests/test_svm.py:380** - # TODO(1.11): remove this test entirely
+- [ ] **sklearn/svm/tests/test_svm.py:502** - # TODO: rework this test to be independent of the random seeds.
+- [ ] **sklearn/svm/tests/test_svm.py:681** - # TODO: rework this test to be independent of the random seeds.
+- [ ] **sklearn/svm/tests/test_svm.py:1168** - # TODO(1.11): remove test entirely.
+- [ ] **sklearn/tests/test_base.py:246** - # TODO (1.11): remove svc test for predict_proba after it is deprecated
+- [ ] **sklearn/tests/test_build.py:14** - # TODO(1.12): remove filter
+- [ ] **sklearn/tests/test_calibration.py:213** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/tests/test_calibration.py:1348** - # TODO: Also ensure that `CalibratedClassifierCV` works appropriately with
+- [ ] **sklearn/tests/test_common.py:124** - # TODO(1.12): remove filter
+- [ ] **sklearn/tests/test_common.py:225** - # TODO: FIX MLP to not check validation set during MLP
+- [ ] **sklearn/tests/test_common.py:271** - # TODO: As more modules support get_feature_names_out they should be removed
+- [ ] **sklearn/tests/test_docstring_parameters.py:70** - # TODO(1.12): remove filter
+- [ ] **sklearn/tests/test_docstring_parameters.py:188** - # TODO(1.10): remove copy warning filter
+- [ ] **sklearn/tests/test_docstring_parameters.py:220** - # TODO(devtools): use _tested_estimators instead of all_estimators in the
+- [ ] **sklearn/tests/test_docstring_parameters.py:240** - # TODO(1.10) remove
+- [ ] **sklearn/tests/test_docstring_parameters.py:244** - # TODO(1.10) remove l1_ratios
+- [ ] **sklearn/tests/test_docstring_parameters.py:245** - # TODO(1.11) remove completely
+- [ ] **sklearn/tests/test_docstrings.py:202** - # TODO: this detection can be improved. Currently we assume that we have
+- [ ] **sklearn/tests/test_metadata_routing.py:950** - # TODO: these test classes can be moved to sklearn.utils._testing once we
+- [ ] **sklearn/tests/test_metaestimators.py:279** - # TODO: remove data validation for the following estimators
+- [ ] **sklearn/tests/test_metaestimators_metadata_routing.py:138** - # TODO(1.11): remove scoring because neg_log_loss is default now
+- [ ] **sklearn/tests/test_min_dependencies_consistency.py:130** - # TODO remove this when our minimum supported numpy version is >=2.
+- [ ] **sklearn/tests/test_multioutput.py:198** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/tests/test_pipeline.py:1047** - # TODO: remove mark once loky bug is fixed:
+- [ ] **sklearn/tree/_classes.py:539** - # TODO: tree shouldn't need this in this case
+- [ ] **sklearn/tree/_classes.py:794** - # TODO: the tree shouldn't need this param
+- [ ] **sklearn/tree/_classes.py:1578** - # TODO(1.11): remove support of "friedman_mse" criterion.
+- [ ] **sklearn/tree/tests/test_tree.py:272** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:336** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:351** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:844** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:940** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:1486** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:2032** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:2462** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:2507** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:2783** - # TODO(1.11): remove the deprecated friedman_mse criterion parametrization
+- [ ] **sklearn/tree/tests/test_tree.py:3108** - # TODO: ExtraTree defaults to splitter="random" which rejects categorical
+- [ ] **sklearn/utils/_array_api.py:24** - # TODO: complete __all__
+- [ ] **sklearn/utils/_array_api.py:612** - # TODO: try removing this once DLPack v1 more widely supported
+- [ ] **sklearn/utils/_array_api.py:613** - # TODO: ValueError not needed once min NumPy >=2.4.0:
+- [ ] **sklearn/utils/_array_api.py:712** - # TODO: when array libraries support `reshape(copy)`, use
+- [ ] **sklearn/utils/_array_api.py:742** - # TODO: when array libraries support `reshape(copy)`, use
+- [ ] **sklearn/utils/_array_api.py:911** - # TODO: consider simplifying this code to use scipy instead once the oldest
+- [ ] **sklearn/utils/_array_api.py:935** - # TODO: Remove this once https://github.com/scipy/scipy/issues/21736 is fixed
+- [ ] **sklearn/utils/_array_api.py:944** - # TODO: refactor once nan-aware reductions are standardized:
+- [ ] **sklearn/utils/_array_api.py:964** - # TODO: refactor once nan-aware reductions are standardized:
+- [ ] **sklearn/utils/_array_api.py:984** - # TODO: refactor once nan-aware reductions are standardized:
+- [ ] **sklearn/utils/_array_api.py:999** - # TODO: refactor once nan-aware reductions are standardized:
+- [ ] **sklearn/utils/_array_api.py:1258** - # TODO: once sufficiently adopted, we might want to instead rely on the
+- [ ] **sklearn/utils/_array_api.py:1296** - # TODO: update if bincount is ever adopted in a future version of the standard:
+- [ ] **sklearn/utils/_array_api.py:1312** - # TODO replace by scipy.special.logsumexp when
+- [ ] **sklearn/utils/_array_api.py:1381** - # TODO: remove this and use the respective array-api-extra function when
+- [ ] **sklearn/utils/_indexing.py:89** - # TODO: `X_indexed` is a DataFrame with a single row; we return a Series to be
+- [ ] **sklearn/utils/_indexing.py:295** - # TODO: we should probably use is_pandas_df_or_series(X) instead but:
+- [ ] **sklearn/utils/_indexing.py:349** - # TODO(1.3): check if the warning is still raised or remove the filter.
+- [ ] **sklearn/utils/_plotting.py:185** - # TODO: Remove once kwargs deprecated on all displays
+- [ ] **sklearn/utils/_plotting.py:446** - # TODO(1.10): remove after the end of the deprecation period of `y_pred`
+- [ ] **sklearn/utils/_test_common/instance_generator.py:359** - # TODO(1.11): remove scoring because it is default now
+- [ ] **sklearn/utils/_test_common/instance_generator.py:519** - # TODO(devtools): allow third-party developers to pass test specific params to checks
+- [ ] **sklearn/utils/_test_common/instance_generator.py:521** - # TODO(devtools): check that function names here exist in checks for the estimator
+- [ ] **sklearn/utils/_test_common/instance_generator.py:615** - # TODO: dual=True is a stochastic solver: we cannot rely on
+- [ ] **sklearn/utils/_test_common/instance_generator.py:874** - # TODO(devtools): enable this behavior for third party estimators as well
+- [ ] **sklearn/utils/_test_common/instance_generator.py:903** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:912** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:921** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:930** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:946** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:988** - # TODO: Remove once fixed: https://github.com/pytorch/pytorch/issues/188128
+- [ ] **sklearn/utils/_test_common/instance_generator.py:995** - # TODO: investigate failure see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1004** - # TODO: investigate failure see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1037** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1046** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1055** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1072** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1093** - # TODO: replace by a statistical test when _dual=True, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1105** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1114** - # TODO: fix sample_weight handling of this estimator, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1126** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1136** - # TODO: fix sample_weight handling of this estimator when probability=False
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1137** - # TODO: replace by a statistical test when probability=True
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1150** - # TODO: fix sample_weight handling of this estimator, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1168** - # TODO: fix sample_weight handling of this estimator, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1178** - # TODO: see gh-33205 for details
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1183** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1211** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1218** - # TODO: error raised by all zero sample weights will be addressed by PR #31529
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1224** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1237** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1246** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1271** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1280** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1289** - # TODO: replace by a statistical test, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1324** - # TODO: fix sample_weight handling of this estimator when probability=False
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1325** - # TODO: replace by a statistical test when probability=True
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1335** - # TODO: fix sample_weight handling of this estimator, see meta-issue #16298
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1353** - # TODO: remove when scipy min version >= 1.11
+- [ ] **sklearn/utils/_test_common/instance_generator.py:1391** - # TODO: remove when scipy min version >= 1.16
+- [ ] **sklearn/utils/_testing.py:1431** - # TODO: remove when pyamg > 5.0.1
+- [ ] **sklearn/utils/_testing.py:1514** - # TODO: remove once a fixed seaborn release is our minimum.
+- [ ] **sklearn/utils/_testing.py:1521** - # TODO(1.10): remove PassiveAggressive
+- [ ] **sklearn/utils/_testing.py:1527** - # TODO: remove once the version where scipy has removed all the sparse matrix
+- [ ] **sklearn/utils/estimator_checks.py:263** - # TODO: test with intercept
+- [ ] **sklearn/utils/estimator_checks.py:264** - # TODO: test with multiple responses
+- [ ] **sklearn/utils/estimator_checks.py:1170** - # TODO(1.10): remove with deprecation of default l1_ratios
+- [ ] **sklearn/utils/estimator_checks.py:1224** - # TODO There are a few errors in SearchCV with array-api-strict because
+- [ ] **sklearn/utils/estimator_checks.py:3855** - # TODO: find out why PLS and CCA fail. RANSAC is random
+- [ ] **sklearn/utils/estimator_checks.py:4193** - # TODO(devtools): this should be a separate check.
+- [ ] **sklearn/utils/estimator_checks.py:4224** - # TODO(devtools): separately check that the constructor doesn't
+- [ ] **sklearn/utils/extmath.py:1289** - # TODO(1.10): Remove
+- [ ] **sklearn/utils/fixes.py:28** - # TODO: We can consider removing the containers and importing
+- [ ] **sklearn/utils/fixes.py:51** - # TODO: Remove when SciPy 1.11 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:64** - # TODO: Remove when Scipy 1.12 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:69** - # TODO: Remove when Scipy 1.15 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:74** - # TODO: Remove when Scipy 1.12 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:87** - # TODO: Fuse the modern implementations of _sparse_min_max and _sparse_nan_min_max
+- [ ] **sklearn/utils/fixes.py:195** - # TODO: Adapt when Pandas > 2.2 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:212** - # TODO: remove when SciPy 1.12 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:259** - # TODO: remove when SciPy 1.12 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:329** - # TODO: Remove when SciPy 1.12 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:338** - # TODO: Remove when Python min version >= 3.12.
+- [ ] **sklearn/utils/fixes.py:382** - # TODO: Remove when Scipy 1.15 is the minimum supported version. In scipy 1.15,
+- [ ] **sklearn/utils/fixes.py:392** - # TODO: Replace when Scipy 1.12 is the minimum supported version
+- [ ] **sklearn/utils/fixes.py:451** - # TODO: remove when SciPy 1.15 is minimal supported version
+- [ ] **sklearn/utils/fixes.py:468** - # TODO: remove when SciPy 1.15 is minimal supported version
+- [ ] **sklearn/utils/fixes.py:530** - # TODO remove when matplotlib 3.10 is the minimal supported version
+- [ ] **sklearn/utils/multiclass.py:348** - # TODO(1.10): SparseSeries and SparseArray was removed in pandas 2.0.
+- [ ] **sklearn/utils/optimize.py:42** - # TODO: use the `line_search_wolfe1` from `scipy` when it is array API compliant.
+- [ ] **sklearn/utils/optimize.py:172** - # TODO: use xp.linalg.vector_norm(gfk, axis=None, ord=1) if available
+- [ ] **sklearn/utils/optimize.py:197** - # TODO(scipy): Remove conversion to numpy once LS supports Array API.
+- [ ] **sklearn/utils/parallel.py:155** - # TODO is there a simpler way that resetwarnings+ filterwarnings?
+- [ ] **sklearn/utils/tests/test_array_api.py:410** - # TODO: add cupy to the list of libraries once the following upstream issue
+- [ ] **sklearn/utils/tests/test_array_api.py:1000** - # TODO: replace this torch/MPS-specific coverage by array-api-strict once
+- [ ] **sklearn/utils/tests/test_extmath.py:228** - # more accurate but slow (TODO find realistic settings here)
+- [ ] **sklearn/utils/tests/test_plotting.py:199** - # TODO: Remove once kwargs deprecated on all displays
+- [ ] **sklearn/utils/tests/test_pprint.py:287** - # TODO(1.11): remove because it is default now
+- [ ] **sklearn/utils/tests/test_stats.py:453** - # TODO: remove the following skip once no longer applicable.
+- [ ] **sklearn/utils/tests/test_stats.py:491** - # TODO: remove the following skip once no longer applicable.
+- [ ] **sklearn/utils/tests/test_validation.py:23** - # TODO: add this estimator into the _mocking module in a further refactoring
+- [ ] **sklearn/utils/validation.py:648** - # TODO: Remove when the minimum version of SciPy supported is 1.12
+
+## License
+
+The source licenses are retained at the repository root.
